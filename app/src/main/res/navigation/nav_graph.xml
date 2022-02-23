@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.recipesapp.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_searchRecipeFragment2"
+            app:destination="@id/searchRecipeFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_viewRecipesFragment2"
+            app:destination="@id/viewRecipesFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_addRecipeActivity"
+            app:destination="@id/addRecipeActivity" />
+        <action
+            android:id="@+id/action_mainFragment_to_viewFavoriteRecipeFragment"
+            app:destination="@id/viewFavoriteRecipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchRecipeFragment2"
+        android:name="com.example.recipesapp.fragments.SearchRecipeFragment"
+        android:label="fragment_search_recipe"
+        tools:layout="@layout/fragment_search_recipe" >
+        <argument
+            android:name="searchpassData"
+            app:argType="integer"
+            android:defaultValue="-1"
+            />
+        <action
+            android:id="@+id/action_searchRecipeFragment2_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_searchRecipeFragment2_to_searchRecipeProfileFragment"
+            app:destination="@id/searchRecipeProfileFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewRecipesFragment2"
+        android:name="com.example.recipesapp.fragments.ViewRecipesFragment"
+        android:label="fragment_view_recipes"
+        tools:layout="@layout/fragment_view_recipes" >
+        <argument
+            android:name="passdata"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_viewRecipesFragment2_to_recipe_profile_Fragment"
+            app:destination="@id/recipe_profile_Fragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_viewRecipesFragment2_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/addRecipeActivity"
+        android:name="com.example.recipesapp.activitys.AddRecipeActivity"
+        android:label="activity_add_recipe"
+        tools:layout="@layout/activity_add_recipe" />
+    <fragment
+        android:id="@+id/recipe_profile_Fragment"
+        android:name="com.example.recipesapp.fragments.Recipe_profile_Fragment"
+        android:label="fragment_recipe_profile_"
+        tools:layout="@layout/fragment_recipe_profile_" >
+        <argument
+            android:name="passData"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_recipe_profile_Fragment_to_viewRecipesFragment2"
+            app:destination="@id/viewRecipesFragment2"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewFavoriteRecipeFragment"
+        android:name="com.example.recipesapp.fragments.ViewFavoriteRecipeFragment"
+        android:label="fragment_view_favorite_recipe"
+        tools:layout="@layout/fragment_view_favorite_recipe" >
+        <action
+            android:id="@+id/action_viewFavoriteRecipeFragment_to_favorite_recipe_profile_Fragment"
+            app:destination="@id/favorite_recipe_profile_Fragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_viewFavoriteRecipeFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorite_recipe_profile_Fragment"
+        android:name="com.example.recipesapp.fragments.favorite_recipe_profile_Fragment"
+        android:label="fragment_favorite_recipe_profile_"
+        tools:layout="@layout/fragment_favorite_recipe_profile_" >
+        <argument
+            android:name="favoritepassData"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_favorite_recipe_profile_Fragment_to_viewFavoriteRecipeFragment"
+            app:destination="@id/viewFavoriteRecipeFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchRecipeProfileFragment"
+        android:name="com.example.recipesapp.fragments.SearchRecipeProfileFragment"
+        android:label="fragment_search_recipe_profile"
+        tools:layout="@layout/fragment_search_recipe_profile" >
+
+        <action
+            android:id="@+id/action_searchRecipeProfileFragment_to_searchRecipeFragment2"
+            app:destination="@id/searchRecipeFragment2"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+    </fragment>
+</navigation>

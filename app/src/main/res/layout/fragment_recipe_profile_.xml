@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#F8F0F6"
+    android:transitionName="transition_to_show_recipe"
+    tools:context=".fragments.Recipe_profile_Fragment">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/profile_BTB_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        app:navigationIcon="@drawable/ic_baseline_navigate_next_24" />
+
+    <com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F3E3F8"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/profile_TXT_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="recipe name"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:layout_margin="6dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/profile_TXT_Category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textSize="20dp"
+                    android:layout_margin="6dp"/>
+
+                <TextView
+                    android:id="@+id/profile_TXT_INGRADIENT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingradient"
+                    android:textSize="20dp"
+                    android:layout_margin="6dp"/>
+                <ImageView
+                    android:id="@+id/profile_IMG_favorite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"/>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/profile_IMG_profile"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+
+
+        </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+
+        android:orientation="horizontal" >
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/profile_BTM_before"
+
+        android:background="@color/black"  style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        app:icon="@drawable/ic_baseline_navigate_before_24" />
+
+    <ImageView
+        android:id="@+id/profile_IMG"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="79"
+        android:layout_gravity="center"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/profile_BTM_next"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:background="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        app:icon="@drawable/ic_baseline_navigate_next_24" />
+
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/profile_BTM_Delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cornerRadius="20dp"
+        android:text="Delete"/>
+
+</LinearLayout>
