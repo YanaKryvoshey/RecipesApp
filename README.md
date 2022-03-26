@@ -1,6 +1,6 @@
 # RecipesApp
 
-<img src = "app/src/main/res/drawable/menu.jp" width = "150">
+<img src = "app/src/main/res/drawable/menu.jpg" width = "150">
 
 
 In This application, the user can add pictures of recipes then, give a name to that recipe, write the Ingredients of the recipe and choice category.
